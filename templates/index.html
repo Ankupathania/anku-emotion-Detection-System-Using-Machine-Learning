@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Detection System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo" onclick="window.location.href='/'">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            </div>
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a class="active mobile-hide" href="/">Home</a>
+                <a class="mobile-hide" href="#emotiondetection">Emotion Detection</a>
+                <a class="dashboard-btn" href="/dashboard">Dashboard</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Emotion Detection <span class="primary-color">System Using Machine</span> Learning</h1>
+                <p>A real‑time system that detects human emotions using webcam and ML model.</p>
+                <a class="primary-btn" href="#emotiondetection">Emotion Detection</a>
+            </div>
+        </div>
+    </section>
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h2>Introd<span class="primary-color">uction</span></h2>
+                    <p>This Emotion Detection System analyzes a person’s facial expressions through a webcam and
+                        classifies emotions such as Happy, Sad, Angry, Surprise, Neutral, etc. The model has been
+                        trained on a labeled dataset and integrated with a real-time camera interface for practical
+                        usage.
+                    </p>
+                    <div class="text-left">
+                        <a class="primary-btn" href="#emotiondetection">Emotion Detection</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="../static/images/ai.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features how-it-works">
+        <div class="container">
+            <h2>How <span class="primary-color">It Works</span></h2>
+            <div class="feature-grid">
+                <div class="card">
+                    <h3>Start the Camera</h3>
+                    <p>The system activates your webcam and captures your real-time facial expressions.</p>
+                </div>
+                <div class="card">
+                    <h3>Detect Your Face</h3>
+                    <p>AI-powered face detection locates your face and prepares it for emotion analysis.</p>
+                </div>
+                <div class="card">
+                    <h3>Analyze Your Emotion</h3>
+                    <p>Our machine learning model reads facial features and identifies emotions like Happy, Sad, Angry,
+                        Neutral, and more.</p>
+                </div>
+                <div class="card">
+                    <h3>View Instant Results</h3>
+                    <p>Your detected emotion appears instantly on the screen, and the dashboard visualizes your emotion
+                        data in graphs and charts.</p>
+                </div>
+            </div>
+            <a class="primary-btn mt-40" href="#emotiondetection">Emotion Detection</a>
+        </div>
+        </div>
+    </section>
+    <section class="features applications-section">
+        <div class="container">
+            <h2>Appli<span class="primary-color">cations</span></h2>
+            <div class="feature-grid">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="../static/images/education.png" alt="Image">
+                    </div>
+                    <h3>Education</h3>
+                    <p>Track student engagement during online learning.</p>
+                </div>
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="../static/images/healthcare.png" alt="Image">
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Support emotional monitoring and mental well-being analysis.</p>
+                </div>
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="../static/images/customer-interaction.png" alt="Image">
+                    </div>
+                    <h3>Customer Interaction</h3>
+                    <p>Enhance customer experience by analyzing their emotions in real time.</p>
+                </div>
+            </div>
+            <a class="primary-btn mt-40" href="#emotiondetection">Emotion Detection</a>
+        </div>
+    </section>
+    <div class="video-wrapper" id="emotiondetection">
+        <div class="container">
+            <div class="content">
+                <h2 class="primary-heading">Live <span class="primary-color">Emotion</span> Detection</h2>
+                <p>The system captures your live video stream and processes each frame using OpenCV. The trained model
+                    then predicts your current emotion, which is displayed instantly on the screen.
+                </p>
+            </div>
+            <div class="video-outer">
+                <video id="video" autoplay></video>
+                <button id="camera-btn">Start Camera</button>
+            </div>
+            <div id="emotion">Emotion: --</div>
+            <div id="status">Initializing camera...</div>
+        </div>
+    </div>
+    <section class="features key-features-section">
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <h2>Key <span class="primary-color">Features</span></h2>
+                    <ul>
+                        <li>
+                            <h3>Real-Time Video</h3>
+                            <p>Processes video frame-by-frame.</p>
+                        </li>
+                        <li>
+                            <h3>ML Prediction</h3>
+                            <p>Emotion classification using deep learning.</p>
+                        </li>
+                        <li>
+                            <h3>Analytics Dashboard</h3>
+                            <p>Tracks and visualizes emotions.</p>
+                        </li>
+                    </ul>
+                    <div class="text-left ">
+                        <a class="primary-btn" href="#emotiondetection">Emotion Detection</a>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="../static/images/02.jpg" alt="Image">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            © 2025 Emotion Detection System | Developed by <strong class="primary-color">Anku Kumar</strong> | IGNOU BCA Final Year Project
+        </div>
+    </footer>
+
+    <script>
+        const video = document.getElementById('video');
+        const emotion = document.getElementById('emotion');
+        const status = document.getElementById('status');
+        const btn = document.getElementById('camera-btn');
+
+        let stream = null;
+        let intervalId = null;
+
+        btn.addEventListener('click', async () => {
+            if (stream) {
+                // Stop camera
+                stream.getTracks().forEach(track => track.stop());
+                stream = null;
+                clearInterval(intervalId);
+                video.srcObject = null;
+                btn.innerText = "Start Camera";
+                status.innerText = "Camera stopped ⏹️";
+                emotion.innerText = "Emotion: --";
+            } else {
+                // Start camera
+                try {
+                    stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                    video.srcObject = stream;
+                    status.innerText = "Camera connected ✅";
+                    btn.innerText = "Stop Camera";
+
+                    // Capture and send frames every 2 seconds
+                    intervalId = setInterval(captureAndSend, 2000);
+                } catch (err) {
+                    console.error("Camera Error:", err);
+                    status.innerText = "⚠️ Cannot access webcam.";
+                }
+            }
+        });
+
+        async function captureAndSend() {
+            if (!video.videoWidth) return;
+
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0);
+            const imageData = canvas.toDataURL('image/jpeg', 0.8);
+
+            try {
+                const res = await fetch('/analyze', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ image: imageData })
+                });
+
+                const data = await res.json();
+                if (data.emotion) {
+                    emotion.innerText = "Emotion: " + data.emotion.toUpperCase();
+                    status.innerText = "Analyzed successfully ✅";
+                } else {
+                    emotion.innerText = "Emotion: --";
+                    status.innerText = "No face detected 😐";
+                }
+            } catch (error) {
+                console.error(error);
+                status.innerText = "⚠️ Error analyzing frame";
+            }
+        }
+    </script>
+</body>
+
+</html>
